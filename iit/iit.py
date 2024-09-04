@@ -14,7 +14,10 @@ from rich.text import Text
 
 traceback.install()
 
-from custom_rich_help_formatter import CustomRichHelpFormatter
+try:
+	from custom_rich_help_formatter import CustomRichHelpFormatter
+except:
+    from .custom_rich_help_formatter import CustomRichHelpFormatter
 
 __pname__ = "image-in-terminal"
 #mdata = metadata.metadata(__pname__)
